@@ -1,0 +1,21 @@
+{/* Schedule Preview */}
+        <section id="schedule" className="py-16 md:py-24 border-t">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl font-bold tracking-tight">Sample Day Schedule</h2>
+            <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+              {[
+                { t: "10:00 – 10:15", d: "Vital Signs" },
+                { t: "10:15 – 10:50", d: "Lecture / Review" },
+                { t: "10:50 – 11:00", d: "Break" },
+                { t: "11:00 – 11:50", d: "Scenarios" },
+                { t: "11:50 – 13:00", d: "Lunch" },
+                { t: "13:00 – 13:50", d: "Kahoot + NREMT Prep" },
+              ].map((s) => (
+                <div key={s.t} className="p-4 rounded-xl border bg-white/70 shadow-sm flex items-center justify-between">
+                  <span className="font-medium">{s.t}</span>
+                  <span className="text-slate-600">{s.d}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
