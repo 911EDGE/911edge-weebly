@@ -1,0 +1,24 @@
+  {/* Footer */}
+        <footer id="contact" className="py-10 border-t bg-white/70">
+          <div className="mx-auto max-w-6xl px-4 grid md:grid-cols-3 gap-6 text-sm">
+            <div>
+              <div className="flex items-center gap-2">
+                <img src="/logo.png" alt="911EDGE Logo" className="h-8 w-auto" />
+                <span className="font-semibold">911EDGE</span>
+              </div>
+              <p className="mt-3 text-slate-600">High‑impact EMT education for Central Virginia and beyond.</p>
+            </div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2"><Mail className="h-4 w-4"/><a href="mailto:EMS911@outlook.com">EMS911@outlook.com</a></div>
+              <div className="flex items-center gap-2"><Phone className="h-4 w-4"/><a href="tel:+14349627414">(434) 962-7414</a></div>
+              <div className="flex items-center gap-2"><MapPin className="h-4 w-4"/>14 Slice Rd, Palmyra, VA 22963</div>
+            </div>
+            <div className="text-slate-500">
+              <p>© {new Date().getFullYear()} 911EDGE. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </MotionConfig>
+  );
+}
