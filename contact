@@ -1,0 +1,25 @@
+ {/* Apply / Contact */}
+        <section id="apply" className="py-16 md:py-24 border-t">
+          <div className="mx-auto max-w-3xl px-4">
+            <Card className="rounded-2xl shadow-xl border" style={{ borderColor: COLORS.gold }}>
+              <CardHeader>
+                <CardTitle>Apply / Request Info</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <form className="grid md:grid-cols-2 gap-4" onSubmit={handleSubmit}>
+                  <Input name="name" value={form.name} onChange={onChange} placeholder="Full name" required />
+                  <Input name="email" value={form.email} onChange={onChange} type="email" placeholder="Email address" required />
+                  <Input name="phone" value={form.phone} onChange={onChange} placeholder="Phone" />
+                  <Input name="cert" value={form.cert} onChange={onChange} placeholder="Current certification (if any)" />
+                  <div className="md:col-span-2 flex gap-3">
+                    <Button type="submit" className="text-white" style={{ backgroundColor: COLORS.accent }}>Submit</Button>
+                    <Button variant="outline" asChild>
+                      <a href="#contact">Contact Us</a>
+                    </Button>
+                  </div>
+                </form>
+                <p className="text-xs text-slate-500 mt-3">This form will open your email client with the details and can optionally log to a Google Sheet (paste your Apps Script URL in the code).</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
