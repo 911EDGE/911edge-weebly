@@ -1,0 +1,43 @@
+{/* Courses */}
+        <section id="courses" className="py-16 md:py-24 border-t">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl font-bold tracking-tight">Courses & Options</h2>
+            <p className="mt-3 text-slate-600">Select the path that matches your goals. All options include access to study resources and instructor support.</p>
+            <div className="mt-8 grid md:grid-cols-3 gap-6">
+              {[{
+                name: "EMT‑B Hybrid",
+                price: "$1200",
+                blurb: "20‑week program mixing online learning with weekly hands‑on sessions.",
+                items: ["Pearson e‑text access","Pocket Prep included","Skills labs weekly"],
+              },{
+                name: "CE Workshops",
+                price: "By session",
+                blurb: "ALS for BLS, Air‑Q device, trauma updates, and more.",
+                items: ["1–3 hr modules","VA OEMS categories","Certificates provided"],
+              },{
+                name: "Custom Training",
+                price: "Quote",
+                blurb: "Department‑specific scenarios and competency refreshers.",
+                items: ["On‑site facilitation","Flexible scheduling","Post‑training report"],
+              }].map((c) => (
+                <Card key={c.name} className="rounded-2xl shadow-xl flex flex-col border" style={{ borderColor: COLORS.gold }}>
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      <span>{c.name}</span>
+                      <span className="text-base font-normal text-slate-500">{c.price}</span>
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm grow">
+                    <p className="text-slate-600">{c.blurb}</p>
+                    <ul className="mt-4 grid gap-2 list-disc pl-5">
+                      {c.items.map(i => (<li key={i}>{i}</li>))}
+                    </ul>
+                    <div className="mt-6">
+                      <Button className="w-full" variant="secondary">Learn more</Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
