@@ -1,0 +1,7 @@
+echo "# 911edge-weebly" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/911EDGE/911edge-weebly.git
+git push -u origin main
