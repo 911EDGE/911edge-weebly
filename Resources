@@ -1,0 +1,36 @@
+
+        {/* Resources */}
+        <section id="resources" className="py-16 md:py-24 border-t">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl font-bold tracking-tight flex items-center gap-2"><BookOpen className="h-7 w-7"/> Student Resources</h2>
+            <p className="mt-3 text-slate-600">Quick links you’ll use all course long.</p>
+            <div className="mt-6 grid md:grid-cols-3 gap-6">
+              {[{
+                name: "MyBradyLab (Pearson)",
+                url: "#",
+                desc: "Reading assignments, quizzes, and e‑text access.",
+              },{
+                name: "Pocket Prep",
+                url: "#",
+                desc: "Daily practice questions for NREMT prep.",
+              },{
+                name: "YouTube Playlists",
+                url: "#",
+                desc: "Weekly support videos and skills refreshers.",
+                icon: <Youtube className="h-4 w-4"/>,
+              }].map((r) => (
+                <Card key={r.name} className="rounded-2xl shadow-xl">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">{r.icon}{r.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-slate-600">{r.desc}</p>
+                    <a href={r.url} className="inline-flex items-center gap-2 mt-4 text-sm font-medium" style={{ color: COLORS.accent }}>
+                      Open link <ExternalLink className="h-4 w-4"/>
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
