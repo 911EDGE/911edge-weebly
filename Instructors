@@ -1,0 +1,22 @@
+     {/* Instructors */}
+        <section id="instructors" className="py-16 md:py-24 border-t">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-3xl font-bold tracking-tight flex items-center gap-2"><Users className="h-7 w-7"/> Instructors</h2>
+            <div className="mt-6 grid md:grid-cols-3 gap-6">
+              {[
+                { name: "Denise Wall, NREMT‑P, VA OEMS EC", bio: "Program lead and Education Coordinator. Focus areas: airway, cardiac, and scenario‑based training.", img: "/instructors/denise.jpg" },
+                { name: "Adjunct Faculty", bio: "Experienced EMTs and paramedics supporting skills labs and NREMT prep.", img: "/instructors/adjunct.jpg" },
+                { name: "Medical Director", bio: "Oversight of medical content and competencies.", img: "/instructors/omd.jpg" },
+              ].map((p) => (
+                <Card key={p.name} className="rounded-2xl shadow-xl">
+                  <CardHeader>
+                    <CardTitle>{p.name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-sm text-slate-600">{p.bio}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
